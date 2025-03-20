@@ -4,7 +4,8 @@
   "main": "server.ts",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "knex": "knex migrate:make cursos -x ts"
+    "knex": "knex migrate:make cursos -x ts",
+    "k": "knex migrate:latest -x ts"
   },
   "keywords": [],
   "author": "João M J Braga",

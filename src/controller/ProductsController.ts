@@ -20,4 +20,5 @@ export class ProductsController {
 
         res.status(201).json({name, price,user_id:req.user_id})
     }
+   
 }
