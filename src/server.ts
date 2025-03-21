@@ -1,4 +1,4 @@
-import  Express, {Request, Response}  from "express";
+import  Express, {Request, Response, NextFunction}  from "express";
 import {routes} from './routes'
 import { AppError } from "./utils/appError";
 import { ZodError } from "zod";
@@ -10,7 +10,7 @@ app.use(Express.json())
 
 app.use(routes)
 
-app.use((err:any, req:Request, res:Response, _:any) => {
+app.use((err:any, req:Request, res:Response, __:NextFunction) => {
     if(err instanceof AppError){
         return res.status(err.statuscode).json({message: err.message})
     }

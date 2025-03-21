@@ -12,9 +12,12 @@ import type { Knex } from "knex";
     migrations: {
       extension: 'ts',
       directory: 'src/database/migrations'
+    },
+    seeds: {
+      extension: 'ts',
+      directory: 'src/database/seeds'
     }
   }
-
 };
 
 //module.exports = config;
